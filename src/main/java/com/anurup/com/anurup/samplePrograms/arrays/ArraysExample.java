@@ -1,7 +1,7 @@
 package com.anurup.com.anurup.samplePrograms.arrays;
 
 import java.util.Scanner;
-//Testig commit
+//Testig commit and push
 public class ArraysExample {
 
     public static void main(String[] args) {
