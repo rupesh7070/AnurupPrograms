@@ -1,5 +1,7 @@
 package com.anurup.samplePrograms.patterns;
 
+//This is test 
+
 import java.util.Scanner;
 
 public class Patterns {
