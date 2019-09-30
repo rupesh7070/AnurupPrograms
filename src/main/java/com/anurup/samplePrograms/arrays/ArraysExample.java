@@ -1,4 +1,4 @@
-package com.anurup.com.anurup.samplePrograms.arrays;
+package com.anurup.samplePrograms.arrays;
 
 import java.util.Scanner;
 //Testig commit and push

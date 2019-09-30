@@ -1,4 +1,4 @@
-package com.anurup.com.anurup.samplePrograms.patterns;
+package com.anurup.samplePrograms.patterns;
 
 import java.util.Scanner;
 

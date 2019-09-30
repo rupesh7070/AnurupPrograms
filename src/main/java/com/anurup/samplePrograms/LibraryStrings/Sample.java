@@ -1,4 +1,4 @@
-package com.anurup.com.anurup.samplePrograms.LibraryStrings;
+package com.anurup.samplePrograms.LibraryStrings;
 
 import java.util.Scanner;
 

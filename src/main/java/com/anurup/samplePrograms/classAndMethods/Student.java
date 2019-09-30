@@ -1,4 +1,4 @@
-package com.anurup.com.anurup.samplePrograms.classAndMethods;
+package com.anurup.samplePrograms.classAndMethods;
 
 import java.util.Scanner;
 //Page 36 : Question bank

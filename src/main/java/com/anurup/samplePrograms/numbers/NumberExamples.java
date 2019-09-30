@@ -1,4 +1,4 @@
-package com.anurup.com.anurup.samplePrograms.numbers;
+package com.anurup.samplePrograms.numbers;
 
 public class NumberExamples {
     public static void main(String[] args) {
