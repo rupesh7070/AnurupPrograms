@@ -1,0 +1,8 @@
+*.log
+*.xml
+*.jar
+*.gradle
+*.properties
+*.bat
+gradlew
+
