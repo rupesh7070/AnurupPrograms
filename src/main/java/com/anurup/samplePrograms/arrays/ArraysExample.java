@@ -12,9 +12,7 @@ public class ArraysExample {
 */
         biggest();
     }
-// Test
-
-    public static void bubbleSort() {
+        public static void bubbleSort() {
         int numbers[] = {3, 4, 2, 1, 5, -1, 8, 3, 3};
         for (int i = 0; i < numbers.length; i++) {
             for (int j = 0; j < numbers.length - 1 - i; j++) {
