@@ -3,7 +3,7 @@ package com.anurup.samplePrograms.numbers;
 public class NumberExamples {
     public static void main(String[] args) {
         NumberExamples numerExample = new NumberExamples();
-        numerExample.specialNumber(145);
+        numerExample.specialNumberSec(146);
 
     }
 
@@ -12,7 +12,7 @@ public class NumberExamples {
     public void niven(int num) {
         int sum = 0;
         int digit = 0;
-        int copy =num;
+        int copy = num;
         while (num > 0) {
             digit = num % 10;
             sum = sum + digit;
@@ -85,4 +85,30 @@ public class NumberExamples {
         }
 
     }
+
+    // Special number
+    // Special Number : Sum of factorial of digit of  the number is same as number
+    //EG : 145 is special as 5 ! +4!+1! = 145
+
+    public void specialNumberSec(int num) {
+        int temp = num;
+        int sum = 0;
+
+        while (temp > 0) {
+            int digit = temp % 10;
+            temp = temp / 10;
+            int fact = 1;
+            for (int i = 1; i <= digit; i++) {
+                fact = fact * i;
+            }
+            sum = sum + fact;
+        }
+        if (sum == num) {
+            System.out.println("Number is special");
+        } else {
+            System.out.println("Number is not special");
+        }
+
+    }
+
 }

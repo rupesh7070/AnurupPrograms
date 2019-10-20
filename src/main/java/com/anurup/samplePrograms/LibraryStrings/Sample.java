@@ -74,23 +74,6 @@ public class Sample {
 
     public void reverseEachCharcter() {
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter the sentence");
-        String sentence = sc.nextLine();
-        int len = sentence.length();
-        String newSentence= "";
-
-        for (int i = 0; i < len ; i++) {
-            Character chr = sentence.charAt(i);
-            if(chr >= 'a' && chr <= 'z') {
-                newSentence = newSentence + Character.toUpperCase(chr);
-            }else{
-                newSentence = newSentence + Character.toLowerCase(chr);
-            }
-        }
-
-        System.out.println(newSentence);
     }
 
     // program to accept a word in lower case and convert first letter of each word to upper case
