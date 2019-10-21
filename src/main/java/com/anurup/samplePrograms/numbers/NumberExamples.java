@@ -1,9 +1,12 @@
 package com.anurup.samplePrograms.numbers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class NumberExamples {
     public static void main(String[] args) {
         NumberExamples numerExample = new NumberExamples();
-        numerExample.specialNumberSec(146);
+        numerExample.reverse(753);
 
     }
 
@@ -67,7 +70,7 @@ public class NumberExamples {
     public void specialNumber(int number) {
         int sum = 0;
         int tempNumber = number;
-        while (tempNumber >= 1) {
+        while (tempNumber > 0) {
             int digit = tempNumber % 10;
             tempNumber = tempNumber / 10;
             int fact = 1;
@@ -83,32 +86,38 @@ public class NumberExamples {
         } else {
             System.out.println("Number is not a special");
         }
-
     }
 
-    // Special number
-    // Special Number : Sum of factorial of digit of  the number is same as number
-    //EG : 145 is special as 5 ! +4!+1! = 145
+    // Check if a number is palindrome
+    //e.g : 121, 75257,11
+    // Reverse the number and if it's same as original number then it's a palindorme
 
-    public void specialNumberSec(int num) {
-        int temp = num;
+    public void palindrome(int num) {
+        int r, sum = 0, temp;
+        temp = num;
+        while (num > 0) {
+            r = num % 10;  //getting remainder
+            sum = (sum * 10) + r;
+            num = num / 10;
+        }
+        if (temp == sum)
+            System.out.println("palindrome number ");
+        else
+            System.out.println("not palindrome");
+    }
+
+    // Program to reverse a given number
+
+    public void reverse(int num) {
+        int org = num;
         int sum = 0;
-
-        while (temp > 0) {
-            int digit = temp % 10;
-            temp = temp / 10;
-            int fact = 1;
-            for (int i = 1; i <= digit; i++) {
-                fact = fact * i;
-            }
-            sum = sum + fact;
-        }
-        if (sum == num) {
-            System.out.println("Number is special");
-        } else {
-            System.out.println("Number is not special");
+        while (num > 0) {
+            int rem = num % 10;
+            sum = (sum * 10) + rem;
+            num = num / 10;
         }
 
+        System.out.println("Reverse number of "+org +  " is --> " + sum);
     }
-
 }
+

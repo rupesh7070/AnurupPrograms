@@ -2,16 +2,11 @@ package com.anurup.samplePrograms.LibraryStrings;
 
 import java.util.Scanner;
 
-public class Sample {
+public class StringExamples {
 
     public static void main(String[] args) {
-        Sample sam = new Sample();
-/*
-        sam.specialWord("COMIC");
-        sam.isPlanindrome("MADAM1");
-        sam.searchWord();
-*/
-        sam.reverseEachCharcter();
+        StringExamples sam = new StringExamples();
+        sam.reverseFirstCharcterOfEachWord();
     }
 
     //Special Words - Words which start and end with same letters
@@ -68,15 +63,20 @@ public class Sample {
         System.out.println("Searched word occurs" + count + " times");
     }
 
-    // program to accept a string and display new string by reversing each charcter
+    // program to accept a string and display new string by reversing cse of each charcter
     // This is a Test
     // tHIS IS A tEST
 
     public void reverseEachCharcter() {
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter sentence ");
+        String text = sc.nextLine();
+
+
     }
 
-    // program to accept a word in lower case and convert first letter of each word to upper case
+    // program to accept a sentence in lower case and convert first letter of each word in sentence to upper case
 
     // this is a test
     // This Is A Test
@@ -87,6 +87,18 @@ public class Sample {
 
         System.out.println("Enter the sentence");
         String sentence = sc.nextLine();
+        String newSentence = "";
+        int count = 0;
+        while (sentence.indexOf("", count) > 0) {
+            int pos = sentence.indexOf("", count);
+            String world = sentence.substring(count, pos);
+            String newWord = world.substring(0, 1).toUpperCase() + world.substring(1);
+            newSentence = newSentence + newWord;
+            count = count + pos;
+        }
+
+        System.out.println("The new sentence is " +newSentence);
+
     }
 
 }
