@@ -14,6 +14,11 @@ package com.anurup.samplePrograms.overloading;
 
 public class PatternsAndSumExample {
 
+    public static void main(String[] args) {
+        PatternsAndSumExample patternsAndSumExample = new PatternsAndSumExample();
+        patternsAndSumExample.pattern('$', 5);
+    }
+
     public void pattern(char c, int n) {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {

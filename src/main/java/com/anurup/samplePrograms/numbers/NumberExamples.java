@@ -2,11 +2,12 @@ package com.anurup.samplePrograms.numbers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class NumberExamples {
     public static void main(String[] args) {
         NumberExamples numerExample = new NumberExamples();
-        numerExample.reverse(753);
+        numerExample.neon();
 
     }
 
@@ -91,6 +92,7 @@ public class NumberExamples {
     // Check if a number is palindrome
     //e.g : 121, 75257,11
     // Reverse the number and if it's same as original number then it's a palindorme
+    // Below is the algo to reverse a number
 
     public void palindrome(int num) {
         int r, sum = 0, temp;
@@ -108,16 +110,45 @@ public class NumberExamples {
 
     // Program to reverse a given number
 
-    public void reverse(int num) {
-        int org = num;
-        int sum = 0;
+    public void reverse() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ...");
+        int num = sc.nextInt();
+
+        int reversed = 0;
+
         while (num > 0) {
-            int rem = num % 10;
-            sum = (sum * 10) + rem;
+            int remainder = num % 10;
+            reversed = reversed * 10 + remainder;
             num = num / 10;
         }
 
-        System.out.println("Reverse number of "+org +  " is --> " + sum);
+        System.out.println("Reversed number is " + reversed);
+
     }
+
+    // Program to check if a number is Neon
+    //A number is Neon if sum of digit of squares of that number is same as number
+
+    public void neon() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number..");
+        int num = sc.nextInt();
+        int square = num * num;
+        int sum = 0;
+
+        while (square > 0) {
+            int rem = square % 10;
+            sum = sum + (rem );
+            square = square/10;
+        }
+
+        if(sum == num){
+            System.out.println("Number is Neon");
+        }else{
+            System.out.println("NUmber is not Neon");
+        }
+    }
+
 }
 
