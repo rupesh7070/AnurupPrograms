@@ -61,10 +61,13 @@ public class Student {
     }
 
     public static void main(String[] args) {
+
+        // Using Constructor
         Student anurup  = new Student("Anurup", 15, 75, 85, 95);
         anurup.compute();
         anurup.display();
 
+        // Asking users to imput values
         Student swarup  = new Student();
         swarup.getStudentDetails();
         swarup.compute();

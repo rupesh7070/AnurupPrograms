@@ -1,4 +1,4 @@
-package com.anurup.samplePrograms.classAndMethods;
+package com.anurup.samplePrograms.overloading;
 
 
 public class OverloadingExample {
