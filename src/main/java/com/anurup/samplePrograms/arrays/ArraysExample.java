@@ -1,6 +1,7 @@
 package com.anurup.samplePrograms.arrays;
 
 import java.util.Scanner;
+
 //Testig commit and push
 public class ArraysExample {
 
@@ -12,9 +13,10 @@ public class ArraysExample {
 */
         biggest();
     }
-        public static void bubbleSort() {
+
+    public static void bubbleSort() {
         int numbers[] = {3, 4, 2, 1, 5, -1, 8, 3, 3};
-        for (int i = 0; i < numbers.length; i++) {
+        for (int i = 0; i < numbers.length - 1; i++) {
             for (int j = 0; j < numbers.length - 1 - i; j++) {
                 if (numbers[j] > numbers[j + 1]) {
                     int temp = numbers[j];
@@ -33,7 +35,7 @@ public class ArraysExample {
             int smallest = numbers[i];
             pos = i;
 
-            for (int j = i + 1; j < numbers.length -1; j++) {
+            for (int j = i + 1; j < numbers.length - 1; j++) {
                 if (numbers[j] < smallest) {
                     smallest = numbers[j];
                     pos = j;
@@ -77,21 +79,21 @@ public class ArraysExample {
 
     // program to take  5 element in one dimentional array and print the biggest
 
-    public static void biggest(){
+    public static void biggest() {
         Scanner sc = new Scanner(System.in);
         int[] numbers = new int[5];
-        for(int i =0 ; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             System.out.println("enter number");
-            numbers[i]= sc.nextInt();
+            numbers[i] = sc.nextInt();
         }
         int biggest = numbers[0];
-        for(int i =1 ; i < numbers.length; i++){
-            if(numbers[i] > biggest){
-                biggest= numbers[i];
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > biggest) {
+                biggest = numbers[i];
             }
         }
 
-        System.out.println("biggest element is " +biggest);
+        System.out.println("biggest element is " + biggest);
     }
 
     // program to input and store roll numbers, names and marks in 3 subject of n

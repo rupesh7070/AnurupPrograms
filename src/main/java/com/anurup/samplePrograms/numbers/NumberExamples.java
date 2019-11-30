@@ -65,50 +65,32 @@ public class NumberExamples {
         }
     }
 
-    // Special Number : Sum of factorial of digit of  the number is same as number
-    //EG : 145 is special as 5 ! +4!+1! = 145
-
-    public void specialNumber(int number) {
-        int sum = 0;
-        int tempNumber = number;
-        while (tempNumber > 0) {
-            int digit = tempNumber % 10;
-            tempNumber = tempNumber / 10;
-            int fact = 1;
-
-            for (int i = 1; i <= digit; i++) {
-                fact = fact * i;
-            }
-            sum = sum + fact;
-        }
-
-        if (sum == number) {
-            System.out.println("Number is special");
-        } else {
-            System.out.println("Number is not a special");
-        }
-    }
 
     // Check if a number is palindrome
     //e.g : 121, 75257,11
     // Reverse the number and if it's same as original number then it's a palindorme
     // Below is the algo to reverse a number
+    // reverse = reverse*10+lastDigit
+
 
     public void palindrome(int num) {
-        int r, sum = 0, temp;
+        int r, reverse = 0, temp;
         temp = num;
         while (num > 0) {
             r = num % 10;  //getting remainder
-            sum = (sum * 10) + r;
+            reverse = (reverse * 10) + r;
             num = num / 10;
         }
-        if (temp == sum)
+        if (temp == reverse)
             System.out.println("palindrome number ");
         else
             System.out.println("not palindrome");
     }
 
     // Program to reverse a given number
+    // LOgic to find reverse
+    // reverse = reverse*10 +lastDigit
+    //321 = > 1 => 10*1+2 => 10*12+3
 
     public void reverse() {
         Scanner sc = new Scanner(System.in);
@@ -139,13 +121,13 @@ public class NumberExamples {
 
         while (square > 0) {
             int rem = square % 10;
-            sum = sum + (rem );
-            square = square/10;
+            sum = sum + (rem);
+            square = square / 10;
         }
 
-        if(sum == num){
+        if (sum == num) {
             System.out.println("Number is Neon");
-        }else{
+        } else {
             System.out.println("NUmber is not Neon");
         }
     }
